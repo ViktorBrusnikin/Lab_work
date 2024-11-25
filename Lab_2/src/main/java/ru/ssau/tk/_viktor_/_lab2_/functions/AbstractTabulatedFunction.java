@@ -17,11 +17,6 @@ public abstract class AbstractTabulatedFunction implements TabulatedFunction{
     }
 
     @Override
-    public int getCount(){
-        return count;
-    }
-
-    @Override
     public double apply(double x) {
         if (x < leftBound()) {
             return extrapolateLeft(x);
