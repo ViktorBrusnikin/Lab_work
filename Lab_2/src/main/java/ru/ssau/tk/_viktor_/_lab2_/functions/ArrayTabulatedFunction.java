@@ -37,6 +37,7 @@ public class ArrayTabulatedFunction  extends AbstractTabulatedFunction  {
         }
     }
 
+    @Override
     public int getCount(){
         return count;
     }
