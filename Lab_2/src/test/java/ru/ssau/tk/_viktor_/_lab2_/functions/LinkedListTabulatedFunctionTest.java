@@ -13,6 +13,15 @@ class LinkedListTabulatedFunctionTest {
         LinkedListTabulatedFunction test = new LinkedListTabulatedFunction(xArr, yArr);
 
         assertEquals(1, test.floorIndexOfX(3.0), 1e-9);
+
+        MathFunction temp1 = new SqrFunction();
+        MathFunction temp2 = new UnitFunction();
+
+        CompositeFunction func = temp1.andThen(temp2);
+
+        LinkedListTabulatedFunction test2 = new LinkedListTabulatedFunction(func, 0, 5, 5);
+
+        assertEquals(2, test2.floorIndexOfX(3.0), 1e-9);
     }
 
     @Test
@@ -48,6 +57,15 @@ class LinkedListTabulatedFunctionTest {
         LinkedListTabulatedFunction test = new LinkedListTabulatedFunction(func,0,10,10);
 
         assertEquals(10, test.getCount(), 1e-9);
+
+        MathFunction temp1 = new SqrFunction();
+        MathFunction temp2 = new UnitFunction();
+
+        CompositeFunction func1 = temp1.andThen(temp2);
+
+        LinkedListTabulatedFunction test2 = new LinkedListTabulatedFunction(func1, 0, 5, 5);
+
+        assertEquals(5, test2.getCount(), 1e-9);
     }
 
     @Test
@@ -114,5 +132,14 @@ class LinkedListTabulatedFunctionTest {
         LinkedListTabulatedFunction test = new LinkedListTabulatedFunction(xArr, yArr);
 
         assertEquals(4.0, test.rightBound(), 1e-9);
+
+        MathFunction temp1 = new SqrFunction();
+        MathFunction temp2 = new UnitFunction();
+
+        CompositeFunction func = temp1.andThen(temp2);
+
+        LinkedListTabulatedFunction test2 = new LinkedListTabulatedFunction(func, 0, 5, 5);
+
+        assertEquals(5, test2.rightBound(), 1e-9);
     }
 }

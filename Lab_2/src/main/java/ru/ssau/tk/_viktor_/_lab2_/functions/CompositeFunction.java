@@ -5,10 +5,6 @@ public class CompositeFunction implements MathFunction{
     private final MathFunction secondFunction;
 
     public CompositeFunction(MathFunction firstFunc, MathFunction secondFunc){
-        if (firstFunc == null || secondFunc == null) {
-            throw new IllegalArgumentException("Функции не могут быть null");
-        }
-
         this.firstFunction = firstFunc;
         this.secondFunction = secondFunc;
     }
