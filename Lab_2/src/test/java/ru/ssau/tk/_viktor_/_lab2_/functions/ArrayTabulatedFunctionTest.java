@@ -8,11 +8,10 @@ class ArrayTabulatedFunctionTest {
 
     @Test
     void getCount() {
-        double[] xArr = {0.0, 1.2, 4.0};
-        double[] yArr = {0.0, 4.3, 1.0};
-        ArrayTabulatedFunction testArr= new ArrayTabulatedFunction(xArr, yArr);
+        MathFunction func = new SqrFunction();
+        ArrayTabulatedFunction test = new ArrayTabulatedFunction(func,0,10,10);
 
-        assertEquals(3, testArr.getCount(), 1e-9);
+        assertEquals(10, test.getCount(), 1e-9);
     }
 
     @Test
