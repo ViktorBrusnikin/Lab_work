@@ -1,10 +1,11 @@
-package ru.ssau.tk._viktor_._lab2_.functions;
+package ru.ssau.tk._viktor_._lab3_.functions;
 
-public class IdentityFunction implements MathFunction{
+public class IdentityFunction implements MathFunction, Cloneable {
     @Override
     public double apply(double x){
         return x;
     }
+
     @Override
     public String toString() {
         return "[IdentityFunction] Объекты этого класса выполняют тождественное преобразование";

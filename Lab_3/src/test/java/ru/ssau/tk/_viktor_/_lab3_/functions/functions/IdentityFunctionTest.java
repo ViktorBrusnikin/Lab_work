@@ -1,4 +1,4 @@
-package ru.ssau.tk._viktor_._lab2_.functions;
+package ru.ssau.tk._viktor_._lab3_.functions;
 
 import org.junit.jupiter.api.Test;
 
